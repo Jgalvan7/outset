@@ -1,0 +1,47 @@
+.heroIndex {
+    padding: 0 10px;
+    margin: 15px 0;
+    &--title {
+        margin: 0 auto;
+    }
+    &--text {
+        max-width: 600px;
+        text-align: justify;
+    }
+    &--button {
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px 15px;
+        border: 1px solid $color-claro;
+        color: $color-claro;
+        font-weight: 700;
+        background: none;
+        background-color: rgba($color: $color-claro, $alpha: 0.3);
+        &:hover {
+            border: 1px solid $color-claro;
+            background-color: $color-primario;
+            background: linear-gradient(to bottom right, $color-secundario, $color-alternativo);
+        }
+    }
+    &--image {
+        display: none;
+    }
+    @include media(tablet) {
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+        margin: 20px auto;
+        &--text {
+            padding: 0 10px;
+        }
+        &--image {
+            display: inline-block;
+            width: 400px;
+            margin: 0 auto;
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+}

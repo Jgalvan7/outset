@@ -1,0 +1,160 @@
+.moduloEpisodios {
+    margin: 10px auto;
+    padding: 10px;
+    &__item {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    @include media(tablet) {
+        max-width: 1000px;
+    }
+}
+
+.moduloFromWhere {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+    &--text {
+        text-align: justify;
+        h3 {
+            margin-bottom: 10px;
+        }
+    }
+    @include media(tablet) {
+        max-width: 700px;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px auto;
+        &--img {
+            max-width: 320px;
+        }
+    }
+    @include media(desktop) {
+        max-width: 1000px;
+    }
+}
+
+.moduloInvited {
+    &--title {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    img {
+        width: 100%;
+    }
+    @include media(tablet) {
+        &--img {
+            display: flex;
+            flex-wrap: wrap;
+            img {
+                max-width: 50%;
+            }
+        }
+    }
+    @include media(desktop) {
+        &--title {
+            width: 900px;
+            margin: 30px auto 10px;
+        }
+    }
+    @include media(desktop-m) {
+        img {
+            max-width: 33.33%;
+        }
+    }
+}
+
+.moduloThemes {
+    &--title {
+        margin: 20px 10px;
+    }
+    &--themes {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .themesList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        list-style: none;
+        &--item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                margin-bottom: 15px;
+            }
+        }
+        @include media(tablet) {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            &--item {
+                width: 350px;
+            }
+        }
+        @include media(desktop) {
+            &--item {
+                width: 220px;
+            }
+        }
+    }
+    @include media(tablet) {
+        .themesList {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            &--item {
+                width: 350px;
+            }
+        }
+    }
+    @include media(desktop) {
+        &--title {
+            width: 900px;
+            margin: 30px auto;
+        }
+        .themesList {
+            &--item {
+                width: 220px;
+            }
+        }
+    }
+}
+
+.moduloLastUpdate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    padding: 70px 0;
+    color: $color-claro;
+    clip-path: polygon(0 20%, 50% 0%, 100% 20%, 100% 100%, 50% 80%, 0 100%);
+    background-color: rgba($color: $color-oscuro, $alpha: 0.9);
+    &--title {
+        font-weight: bold;
+        @include font-size(16px);
+    }
+    &--button {
+        width: 300px;
+        margin: 15px auto;
+        padding: 10px 15px;
+        border: 1px solid $color-claro;
+        color: $color-claro;
+        font-weight: 700;
+        background: none;
+        background-color: rgba($color: $color-claro, $alpha: 0.3);
+        &:hover {
+            border: 1px solid $color-claro;
+            background-color: $color-primario;
+            background: linear-gradient(to bottom right, $color-secundario, $color-alternativo);
+        }
+    }
+    @include media(tablet) {
+        &--title {
+            @include font-size(24px);
+        }
+    }
+}
